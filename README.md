@@ -44,16 +44,6 @@ A comprehensive NestJS application with authentication, user profile management,
    psql -U postgres -f scripts/create-database.sql
    \`\`\`
 
-5. Start the application:
-   \`\`\`bash
-   # Development
-   npm run start:dev
-
-   # Production
-   npm run build
-   npm run start:prod
-   \`\`\`
-
 ## API Endpoints
 
 ### Authentication
@@ -85,56 +75,6 @@ A comprehensive NestJS application with authentication, user profile management,
 - `GET /watch-later` - Get user watch later list
 - `DELETE /watch-later/:movieId` - Remove from watch later
 - `GET /watch-later/check/:movieId` - Check if movie is in watch later
-
-## API Documentation
-
-Once the application is running, visit:
-- Swagger UI: `http://localhost:3001/api/docs`
-
-## Environment Variables
-
-\`\`\`env
-# Database
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=password
-DB_NAME=movie_app
-
-# JWT
-JWT_SECRET=your-secret-key
-JWT_EXPIRES_IN=7d
-
-# TMDB API
-TMDB_API_KEY=your-tmdb-api-key
-
-# Email Configuration
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASS=your-app-password
-SMTP_FROM=noreply@movieapp.com
-
-# App
-NODE_ENV=development
-PORT=3001
-FRONTEND_URL=http://localhost:3000
-\`\`\`
-
-## Project Structure
-
-\`\`\`
-src/
-├── modules/
-│   ├── auth/           # Authentication module
-│   ├── users/          # User management module
-│   ├── movies/         # Movie integration module
-│   ├── favorites/      # Favorites functionality
-│   └── watch-later/    # Watch later functionality
-├── common/             # Shared DTOs and utilities
-├── app.module.ts       # Root application module
-└── main.ts            # Application entry point
-\`\`\`
 
 ## Best Practices Implemented
 
