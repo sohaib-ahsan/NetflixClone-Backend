@@ -89,29 +89,6 @@ A comprehensive NestJS application with authentication, user profile management,
 - **Validation**: Input validation with decorators
 - **Database**: Proper indexing and relationships
 
-## Email Setup
-
-For password reset functionality, you need to configure SMTP settings:
-
-### Gmail Setup (Recommended for development)
-1. Enable 2-factor authentication on your Gmail account
-2. Generate an App Password:
-   - Go to Google Account settings
-   - Security → 2-Step Verification → App passwords
-   - Generate a password for "Mail"
-3. Use your Gmail address as `SMTP_USER` and the app password as `SMTP_PASS`
-
-### Other Email Providers
-- **SendGrid**: Use `smtp.sendgrid.net` with port 587
-- **Mailgun**: Use `smtp.mailgun.org` with port 587
-- **AWS SES**: Use your region-specific SMTP endpoint
-
-### Production Considerations
-- Use environment-specific email templates
-- Implement email rate limiting
-- Add email delivery status tracking
-- Consider using dedicated email services like SendGrid or AWS SES
-
 ## License
 
 This project is licensed under the MIT License.
